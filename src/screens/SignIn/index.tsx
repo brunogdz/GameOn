@@ -3,7 +3,6 @@ import {
   View, 
   Text, 
   Image,  
-  StatusBar,
 } from 'react-native';
 
 import IllustrationImg from '../../assets/illustration.png';
@@ -13,13 +12,7 @@ import { ButtonIcon } from '../../components/ButtonIcon';
 
 export function SignIn(){
     return(
-      <View style={styles.container}>
-        <StatusBar 
-          barStyle="light-content"
-          backgroundColor="transparent"
-          translucent
-        />
-        
+      <View style={styles.container}>        
         <Image 
           source={IllustrationImg} 
           style={styles.image} 
@@ -35,7 +28,8 @@ export function SignIn(){
   
           <Text style={styles.subtitle}>
             Crie grupos para jogar seus games {`\n`} 
-            favoritos com seus amigos
+            favoritos com seus amigos {`\n`} 
+            sem desculpas agora rs
           </Text>
   
           <ButtonIcon 
