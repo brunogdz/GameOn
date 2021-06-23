@@ -29,7 +29,7 @@ export function Home() {
                 id: '1',
                 name: 'Igreja Team',
                 icon: null,
-                owner: true,
+                owner: false,
             },
             category: '1',
             date: '22/07 às 20:30h',
