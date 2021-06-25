@@ -34,6 +34,18 @@ export function Home() {
             category: '1',
             date: '22/07 às 20:30h',
             description: 'Só vai ter galera girando e chorando pra hacker'
+        },
+        {
+            id: '3',
+            guild: {
+                id: '1',
+                name: 'Endurance',
+                icon: null,
+                owner: true,
+            },
+            category: '1',
+            date: '22/07 às 20:30h',
+            description: 'Só vai ter galera girando e chorando pra hacker'
         }
     ]
 
