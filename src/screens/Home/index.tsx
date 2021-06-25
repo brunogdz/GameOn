@@ -9,9 +9,11 @@ import { Appointment } from '../../components/Appointment';
 import { ListDivider } from '../../components/ListDivider';
 
 import { Background } from '../../components/Background';
+import { useNavigation } from '@react-navigation/native';
 export function Home() {
     const [category, setCategory] = useState('');
 
+    const navigation = useNavigation();
     const appointments = [
         {
             id: '1',
@@ -56,6 +58,10 @@ export function Home() {
         categoryId === category ? setCategory('') : setCategory(categoryId)
 
     }
+
+    function handleAppointmentDetails(){
+        navigation.navigate('AppointmentDetails')
+    }
     // FlatList é uma ótima escolha, pois renderiza n elementos, porém
     // dando vantagem aos que estão na tela sendo carregaods primeiro
     return (
@@ -80,7 +86,10 @@ export function Home() {
                     data={appointments}
                     keyExtractor={item => item.id}
                     renderItem={({ item }) => (
-                        <Appointment data={item} />
+                        <Appointment 
+                            data={item} 
+                            onPress={handleAppointmentDetails}
+                            />
                     )}
                     ItemSeparatorComponent={() => <ListDivider />}
                     style={styles.matches}
