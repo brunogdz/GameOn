@@ -59,16 +59,20 @@ export function Home() {
 
     }
 
-    function handleAppointmentDetails(){
+    function handleAppointmentDetails() {
         navigation.navigate('AppointmentDetails')
     }
+    function handleAppointmentCreate() {
+        navigation.navigate('AppointmentCreate')
+    }
+
     // FlatList é uma ótima escolha, pois renderiza n elementos, porém
     // dando vantagem aos que estão na tela sendo carregaods primeiro
     return (
         <Background>
             <View style={styles.header}>
                 <Profile />
-                <ButtonAdd />
+                <ButtonAdd onPress={handleAppointmentCreate} />
             </View>
 
             <CategorySelect
@@ -86,10 +90,10 @@ export function Home() {
                     data={appointments}
                     keyExtractor={item => item.id}
                     renderItem={({ item }) => (
-                        <Appointment 
-                            data={item} 
+                        <Appointment
+                            data={item}
                             onPress={handleAppointmentDetails}
-                            />
+                        />
                     )}
                     ItemSeparatorComponent={() => <ListDivider />}
                     style={styles.matches}

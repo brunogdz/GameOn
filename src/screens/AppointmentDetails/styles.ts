@@ -31,4 +31,9 @@ export const styles = StyleSheet.create({
     marginLeft: 24,
     marginTop: 27
   },
+  footer: {
+      paddingHorizontal: 24,
+      paddingVertical: 20,
+      marginBottom: getBottomSpace(),
+  }
 })
